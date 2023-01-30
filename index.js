@@ -14,7 +14,7 @@ const server = http.createServer((req, res) =>{
         res.writeHead(200, { "Content-Type": "text/html" })
             fs.readFile('index.html', (err, data) =>{
                 if (err) throw err;
-                res.end(data.toString())
+                res.end(data.toString());
             })
     }else if(reqUrl === '/sendmail'){
         const {name, email, about} = url.parse(req.url, true).query;
