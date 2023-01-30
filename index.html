@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        *{
+            font-family: sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #55828b;
+        }
+        h1{
+            text-align: center;
+            color: #364958;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 50vw;
+        }
+        input, textarea{
+            width: 100%;
+            font-size: 1rem;
+            padding: .5rem 1rem;
+            outline: none;
+            border-radius: .5rem;
+            border: 1px solid #CCC;
+        }
+        .submit{
+            padding: 1rem 3rem;
+            border: none;
+            outline: none;
+            background-color: #364958;
+            color: #FFF;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="/sendmail">
+        <h1>Welcome to NodeMailer</h1>
+        <div>
+            <input type="text" placeholder="Your Name.." name="name" required>        
+        </div>
+        <div>
+            <input type="email" placeholder="Your Email.." name="email" required>
+        </div>
+        <div>
+            <textarea name="about" id="" cols="30" rows="10" placeholder="Type in Your Mail Here.." required></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="submit">
+        </div>
+    </form>
+</body>
+</html>
